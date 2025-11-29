@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <title>SIC Alpha – Simulations d’investissement</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body data-page="simulation">
+  <div class="app">
+    <header class="top">
+      <div class="top-inner">
+        <div class="brand">
+          <div class="brand-logo">SIC</div>
+          <div class="brand-text">
+            <span class="brand-name">SIC Alpha – Student Investment Club</span>
+            <span class="brand-tag">Simulations d’investissement</span>
+          </div>
+        </div>
+        <nav class="nav">
+          <a href="index.html" class="nav-link">Dashboard</a>
+          <a href="simulation.html" class="nav-link active">Simulations</a>
+          <a href="markets.html" class="nav-link">Marchés &amp; news</a>
+          <a href="chat.html" class="nav-link">Assistant</a>
+          <a href="club.html" class="nav-link">SIC Alpha</a>
+          <a href="workshops.html" class="nav-link">Workshops</a>
+          <a href="newsletter.html" class="nav-link">Newsletter</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="section reveal">
+        <div class="section-inner">
+          <div class="section-header">
+            <p class="section-kicker">Simulations</p>
+            <h2 class="section-title">Tester horizon, versements et scénarios</h2>
+            <p class="section-sub">
+              L’idée n’est pas de prédire l’avenir, mais de comprendre comment capital initial,
+              versements réguliers, horizon de placement et hypothèses de rendement interagissent.
+            </p>
+          </div>
+
+          <div class="sim-grid">
+            <div class="panel form-card">
+              <div class="panel-header">
+                <div>
+                  <p class="panel-kicker">Paramètres</p>
+                  <p class="panel-title">Simulation d’investissement</p>
+                </div>
+              </div>
+              <form id="sim-form">
+                <div class="field">
+                  <label for="capital">Capital de départ</label>
+                  <input id="capital" name="capital" type="number" min="0" placeholder="Ex : 2000" />
+                </div>
+                <div class="field">
+                  <label for="mensuel">Versement mensuel</label>
+                  <input id="mensuel" name="mensuel" type="number" min="0" placeholder="Ex : 150" />
+                </div>
+                <div class="field">
+                  <label for="annees">Horizon de placement (années)</label>
+                  <input id="annees" name="annees" type="number" min="1" placeholder="Ex : 10" />
+                </div>
+                <div class="field">
+                  <label for="taux">Rendement annuel estimé (scénario médian, en %)</label>
+                  <input id="taux" name="taux" type="number" step="0.1" placeholder="Ex : 5" />
+                </div>
+                <button type="submit" class="btn primary" style="margin-top:0.4rem;">
+                  Lancer la simulation
+                </button>
+              </form>
+              <p class="panel-note">
+                Le calcul est basé sur des intérêts composés mensuels à partir de tes hypothèses.
+                Trois scénarios sont générés autour du rendement médian.
+              </p>
+            </div>
+
+            <div class="panel sim-results">
+              <div class="panel-header">
+                <div>
+                  <p class="panel-kicker">Résultats</p>
+                  <p class="panel-title">Trois scénarios de trajectoire</p>
+                </div>
+              </div>
+              <div class="scenario-grid">
+                <div class="scenario-card" id="scenario-pess">
+                  <h4>Scénario pessimiste</h4>
+                  <div class="scenario-metric">
+                    <span>Total versé</span><span class="verse">–</span>
+                  </div>
+                  <div class="scenario-metric">
+                    <span>Valeur projetée</span><span class="final">–</span>
+                  </div>
+                  <div class="scenario-metric">
+                    <span>Part de performance</span><span class="perf">–</span>
+                  </div>
+                </div>
+                <div class="scenario-card" id="scenario-base">
+                  <h4>Scénario médian</h4>
+                  <div class="scenario-metric">
+                    <span>Total versé</span><span class="verse">–</span>
+                  </div>
+                  <div class="scenario-metric">
+                    <span>Valeur projetée</span><span class="final">–</span>
+                  </div>
+                  <div class="scenario-metric">
+                    <span>Part de performance</span><span class="perf">–</span>
+                  </div>
+                </div>
+                <div class="scenario-card" id="scenario-opt">
+                  <h4>Scénario optimiste</h4>
+                  <div class="scenario-metric">
+                    <span>Total versé</span><span class="verse">–</span>
+                  </div>
+                  <div class="scenario-metric">
+                    <span>Valeur projetée</span><span class="final">–</span>
+                  </div>
+                  <div class="scenario-metric">
+                    <span>Part de performance</span><span class="perf">–</span>
+                  </div>
+                </div>
+              </div>
+
+              <div>
+                <p class="chart-label" style="margin-top:0.6rem;">Courbe synthétique (scénario médian)</p>
+                <div id="sim-chart" class="sim-chart"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        <p>SIC Alpha – Student Investment Club.</p>
+        <p>Simulation pédagogique, non contractuelle.</p>
+      </div>
+    </footer>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
