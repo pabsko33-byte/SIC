@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <title>SIC Alpha – Assistant débutant</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body data-page="chat">
+  <div class="app">
+    <header class="top">
+      <div class="top-inner">
+        <div class="brand">
+          <div class="brand-logo">SIC</div>
+          <div class="brand-text">
+            <span class="brand-name">SIC Alpha – Student Investment Club</span>
+            <span class="brand-tag">Assistant d’épargnant débutant</span>
+          </div>
+        </div>
+        <nav class="nav">
+          <a href="index.html" class="nav-link">Dashboard</a>
+          <a href="simulation.html" class="nav-link">Simulations</a>
+          <a href="markets.html" class="nav-link">Marchés &amp; news</a>
+          <a href="chat.html" class="nav-link active">Assistant</a>
+          <a href="club.html" class="nav-link">SIC Alpha</a>
+          <a href="workshops.html" class="nav-link">Workshops</a>
+          <a href="newsletter.html" class="nav-link">Newsletter</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="section reveal">
+        <div class="section-inner">
+          <div class="section-header">
+            <p class="section-kicker">Assistant</p>
+            <h2 class="section-title">Questions simples, réponses structurées</h2>
+            <p class="section-sub">
+              Cet assistant n’a pas vocation à donner des recommandations individuelles,
+              mais à proposer une grille de lecture sur quelques thèmes fréquents : livret, ETF,
+              risque, crypto, horizon de placement.
+            </p>
+          </div>
+
+          <div class="chat-grid">
+            <div class="panel panel-chat">
+              <div id="chat-log" class="chat-log">
+                <div class="chat-message bot">
+                  <div class="chat-bubble">
+                    Bonjour, je suis l’assistant de SIC Alpha. Pose une question courte
+                    (ex : <em>“livret ou ETF ?”</em>, <em>“combien mettre en crypto ?”</em>).
+                  </div>
+                </div>
+              </div>
+              <form id="chat-form" class="chat-form">
+                <input
+                  id="chat-input"
+                  type="text"
+                  placeholder="Ex : “Pourquoi un ETF monde est différent d’un livret ?”"
+                  autocomplete="off"
+                />
+                <button type="submit" class="btn primary">Envoyer</button>
+              </form>
+              <p class="panel-note">
+                Plus tard, ce composant pourra être relié à une API d’IA côté serveur pour
+                générer des réponses plus fines à partir de cette base pédagogique.
+              </p>
+            </div>
+
+            <div class="panel panel-faq">
+              <h3 class="faq-title">Questions fréquentes</h3>
+              <div class="faq-chips">
+                <button class="faq-chip" data-faq="livret">Livret vs ETF long terme</button>
+                <button class="faq-chip" data-faq="risque">Comment aborder le risque</button>
+                <button class="faq-chip" data-faq="crypto">Place de la crypto</button>
+                <button class="faq-chip" data-faq="horizon">Horizon de placement</button>
+                <button class="faq-chip" data-faq="etf">ETF monde, définition</button>
+              </div>
+              <div id="faq-answer" class="faq-answer">
+                Sélectionne un thème pour afficher la réponse SIC Alpha.
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        <p>SIC Alpha – Student Investment Club.</p>
+        <p>Assistant pédagogique. Pas de recommandation personnalisée.</p>
+      </div>
+    </footer>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
