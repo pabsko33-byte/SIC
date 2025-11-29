@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <title>SIC Alpha – Newsletter</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body data-page="newsletter">
+  <div class="app">
+    <header class="top">
+      <div class="top-inner">
+        <div class="brand">
+          <div class="brand-logo">SIC</div>
+          <div class="brand-text">
+            <span class="brand-name">SIC Alpha – Student Investment Club</span>
+            <span class="brand-tag">Newsletter marchés &amp; macro</span>
+          </div>
+        </div>
+        <nav class="nav">
+          <a href="index.html" class="nav-link">Dashboard</a>
+          <a href="simulation.html" class="nav-link">Simulations</a>
+          <a href="markets.html" class="nav-link">Marchés &amp; news</a>
+          <a href="chat.html" class="nav-link">Assistant</a>
+          <a href="club.html" class="nav-link">SIC Alpha</a>
+          <a href="workshops.html" class="nav-link">Workshops</a>
+          <a href="newsletter.html" class="nav-link active">Newsletter</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="section reveal">
+        <div class="section-inner">
+          <div class="section-header">
+            <p class="section-kicker">Newsletter</p>
+            <h2 class="section-title">Mémo hebdomadaire marchés &amp; macro</h2>
+            <p class="section-sub">
+              Une synthèse pour étudiants : indices principaux, décisions de banques centrales,
+              quelques graphiques, une ou deux idées à creuser. Le tout avec un ton neutre et pédagogique.
+            </p>
+          </div>
+
+          <div class="panel">
+            <form class="newsletter-form">
+              <div class="field">
+                <label for="email">Adresse e-mail</label>
+                <input id="email" type="email" placeholder="prenom.nom@example.com" />
+              </div>
+              <button type="button" class="btn primary" disabled>
+                Inscription bientôt disponible
+              </button>
+              <p class="newsletter-note">
+                Cette page est une maquette. L’inscription réelle passera plus tard par un backend
+                d’e-mailing dédié (API d’envoi de mails).
+              </p>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        <p>SIC Alpha – Student Investment Club.</p>
+        <p>Newsletter à vocation pédagogique, non promotionnelle.</p>
+      </div>
+    </footer>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
