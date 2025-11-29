@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <title>SIC Alpha – Dashboard étudiant</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body data-page="home">
+  <div class="app">
+    <header class="top">
+      <div class="top-inner">
+        <div class="brand">
+          <div class="brand-logo">SIC</div>
+          <div class="brand-text">
+            <span class="brand-name">SIC Alpha – Student Investment Club</span>
+            <span class="brand-tag">Bordeaux • Sciences économiques &amp; bancaires</span>
+          </div>
+        </div>
+        <nav class="nav">
+          <a href="index.html" class="nav-link active">Dashboard</a>
+          <a href="simulation.html" class="nav-link">Simulations</a>
+          <a href="markets.html" class="nav-link">Marchés &amp; news</a>
+          <a href="chat.html" class="nav-link">Assistant</a>
+          <a href="club.html" class="nav-link">SIC Alpha</a>
+          <a href="workshops.html" class="nav-link">Workshops</a>
+          <a href="newsletter.html" class="nav-link">Newsletter</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="section hero reveal">
+        <div class="section-inner hero-layout">
+          <div>
+            <p class="hero-kicker">Dashboard pédagogique</p>
+            <h1 class="hero-title">
+              Comprendre les marchés<br />
+              pendant les études.
+            </h1>
+            <p class="hero-sub">
+              SIC Alpha est un club d’investissement étudiant basé à Bordeaux. L’objectif :
+              structurer une culture financière sérieuse autour des indices, de la macroéconomie
+              et de la gestion du risque, sans promesse de performance.
+            </p>
+            <div class="hero-tags">
+              <span>Lecture d’indices</span>
+              <span>Simulations d’investissement</span>
+              <span>Macro &amp; politique monétaire</span>
+              <span>Workshops et conférences</span>
+            </div>
+            <div class="hero-actions">
+              <a href="simulation.html" class="btn primary">Simuler un investissement</a>
+              <a href="markets.html" class="btn ghost">Voir les marchés &amp; news</a>
+            </div>
+          </div>
+
+          <div>
+            <div class="panel">
+              <div class="panel-header">
+                <div>
+                  <p class="panel-kicker">Vue maquette</p>
+                  <p class="panel-title">Portefeuille simulé étudiant</p>
+                </div>
+              </div>
+              <div class="metric-row">
+                <span class="metric-label">Capital initial</span>
+                <span class="metric-value">2 000 €</span>
+              </div>
+              <div class="metric-row">
+                <span class="metric-label">Versement mensuel</span>
+                <span class="metric-value">150 €</span>
+              </div>
+              <div class="metric-row">
+                <span class="metric-label">Horizon de placement</span>
+                <span class="metric-value">10 ans</span>
+              </div>
+              <div class="metric-row">
+                <span class="metric-label">Valeur projetée (scénario médian)</span>
+                <span class="metric-value">~ 25 000 €</span>
+              </div>
+              <div id="home-mini-chart" class="small-chart"></div>
+              <p class="panel-note">
+                Exercice pédagogique. Les courbes ici sont simulées. La page “Simulations”
+                permet de travailler avec tes propres hypothèses (horizon, montants, taux).
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="section-inner dashboard-grid">
+          <div class="panel">
+            <div class="panel-header">
+              <div>
+                <p class="panel-kicker">Accès rapide</p>
+                <p class="panel-title">Outils pédagogiques</p>
+              </div>
+            </div>
+            <div class="card-grid-3" style="grid-template-columns: repeat(2, minmax(0, 1fr));">
+              <article class="card">
+                <h3>Simulations</h3>
+                <p>Tester capital, versements et horizon avec plusieurs scénarios.</p>
+                <div style="margin-top:0.6rem;">
+                  <a href="simulation.html" class="btn ghost">Ouvrir</a>
+                </div>
+              </article>
+              <article class="card">
+                <h3>Marchés &amp; actualités</h3>
+                <p>Indices, crypto labo, actualités macro et politiques à relier.</p>
+                <div style="margin-top:0.6rem;">
+                  <a href="markets.html" class="btn ghost">Ouvrir</a>
+                </div>
+              </article>
+              <article class="card">
+                <h3>Assistant débutant</h3>
+                <p>Questions simples sur le livret, les ETF, le risque ou la crypto.</p>
+                <div style="margin-top:0.6rem;">
+                  <a href="chat.html" class="btn ghost">Ouvrir</a>
+                </div>
+              </article>
+              <article class="card">
+                <h3>Student Investment Club</h3>
+                <p>Présentation du club, objectifs et formats (workshops, conférences).</p>
+                <div style="margin-top:0.6rem;">
+                  <a href="club.html" class="btn ghost">Découvrir</a>
+                </div>
+              </article>
+            </div>
+          </div>
+
+          <div class="panel">
+            <div class="panel-header">
+              <div>
+                <p class="panel-kicker">SIC Alpha</p>
+                <p class="panel-title">Positionnement du club</p>
+              </div>
+            </div>
+            <p class="section-sub">
+              Trois étudiants basés à Bordeaux, en études dans le secteur des sciences
+              économiques et bancaires. SIC Alpha est indépendant de toute banque
+              ou société de gestion. Le site n’a pas vocation à fournir des recommandations
+              individuelles, mais une grille de lecture structurée.
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        <p>SIC Alpha – Student Investment Club.</p>
+        <p>Projet pédagogique. Aucune recommandation personnalisée d’investissement.</p>
+      </div>
+    </footer>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
