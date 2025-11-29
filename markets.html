@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <title>SIC Alpha – Marchés & actualités</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body data-page="markets">
+  <div class="app">
+    <header class="top">
+      <div class="top-inner">
+        <div class="brand">
+          <div class="brand-logo">SIC</div>
+          <div class="brand-text">
+            <span class="brand-name">SIC Alpha – Student Investment Club</span>
+            <span class="brand-tag">Marchés &amp; actualités</span>
+          </div>
+        </div>
+        <nav class="nav">
+          <a href="index.html" class="nav-link">Dashboard</a>
+          <a href="simulation.html" class="nav-link">Simulations</a>
+          <a href="markets.html" class="nav-link active">Marchés &amp; news</a>
+          <a href="chat.html" class="nav-link">Assistant</a>
+          <a href="club.html" class="nav-link">SIC Alpha</a>
+          <a href="workshops.html" class="nav-link">Workshops</a>
+          <a href="newsletter.html" class="nav-link">Newsletter</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="section reveal">
+        <div class="section-inner">
+          <div class="section-header">
+            <p class="section-kicker">Board marchés</p>
+            <h2 class="section-title">Indices, crypto labo &amp; actualités macro</h2>
+            <p class="section-sub">
+              L’objectif est de travailler une lecture structurée des marchés : indices,
+              actifs suivis et actualités économiques, sans les transformer en signaux de trading.
+            </p>
+          </div>
+
+          <div class="markets-layout">
+            <div class="panel">
+              <div class="panel-header">
+                <div>
+                  <p class="panel-kicker">Univers suivi</p>
+                  <p class="panel-title">Indices &amp; actifs principaux</p>
+                </div>
+                <div class="filters">
+                  <button class="filter-btn active" data-filter="all">Tous</button>
+                  <button class="filter-btn" data-filter="equity">Actions / ETF</button>
+                  <button class="filter-btn" data-filter="crypto">Crypto labo</button>
+                </div>
+              </div>
+              <div class="table-head">
+                <span>Actif</span>
+                <span>Cours (maquette)</span>
+                <span>Var. jour</span>
+              </div>
+              <div id="markets-table" class="table-body"></div>
+            </div>
+
+            <div class="panel">
+              <div class="panel-header">
+                <div>
+                  <p class="panel-kicker">Focus actif</p>
+                  <p class="panel-title" id="chart-title">Sélectionne un actif</p>
+                </div>
+                <span class="chip" id="chart-ticker"></span>
+              </div>
+
+              <div class="chart-wrapper">
+                <div id="chart-canvas" class="chart-canvas"></div>
+              </div>
+
+              <div class="chart-meta">
+                <div>
+                  <p class="chart-label">Lecture SIC Alpha</p>
+                  <p id="chart-comment" class="chart-comment">
+                    Clique sur un actif à gauche pour visualiser une trajectoire simulée et une
+                    lecture qualitative. Plus tard, cette zone pourra s’appuyer sur des données
+                    de marché en temps réel.
+                  </p>
+                </div>
+                <div id="chart-tags" class="chart-tags"></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="panel" style="margin-top:2rem;">
+            <div class="panel-header">
+              <div>
+                <p class="panel-kicker">Actualités</p>
+                <p class="panel-title">Sélection macro, politique &amp; marchés</p>
+              </div>
+            </div>
+            <div id="news-list" class="news-list"></div>
+            <p class="panel-note">
+              Les éléments affichés ici sont une maquette. À terme, cette section pourra
+              être alimentée par une API de news économiques et financières, filtrée pour un
+              usage pédagogique.
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        <p>SIC Alpha – Student Investment Club.</p>
+        <p>Lecture macro &amp; marchés, à des fins pédagogiques.</p>
+      </div>
+    </footer>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
